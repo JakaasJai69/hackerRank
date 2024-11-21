@@ -4,10 +4,8 @@
 int main(){
   int a,mul=1;
   scanf("%d", &a);
-  while(a!=1){
-    mul*=a;
-    a--;
+  while(mul<=10){
+    printf("%d * %d = %d \n", a, mul, a*mul );
+    mul++;
   }
-  printf("%d \n", mul);
-
 }
