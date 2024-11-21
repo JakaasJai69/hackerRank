@@ -27,7 +27,7 @@ int main(){
     doubled[(2*i)]= a[i];
     doubled[(2*i)+1]= a[i];
   }
-  doubled[(2*i) + 2] = '\n'; 
+  doubled[len * 2] = '\0'; 
   printf("%s", doubled);
   return 0;
 }
