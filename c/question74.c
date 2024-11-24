@@ -26,6 +26,13 @@ middle character(s)
 int main() {
 
   /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-  int
+  char a[100];
+  scanf("%99s", a);
+  
+  int len=strlen(a)-1;
+  if(len%2 != 0){ 
+    printf("%c", a[len/2]);
+    printf("%c", a[(len/2)+1]);
+  } else{printf("%c", a[(len+1)/2]);}
   return 0;
 }
