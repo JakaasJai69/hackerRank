@@ -116,7 +116,66 @@ int test(int a) {
   return sum;
 }
 
+int countDigit(int a){
+  int count=0;
+  while(a!=0){
+    a/=10;
+    count+=1;
+  }
+  return count;
+}
+
+int reverse(int a){
+  int b, reversed=0;
+
+  while(a!=0){
+    b=a%10;
+    reversed=reversed*10+b;
+    a/=10;
+  }
+  return reversed;
+}
+
+int sum(int a){
+  int sum=0, b;
+
+  while(a!=0){
+    b=a%10;
+    sum+=b;
+    a/=10;
+  }
+  return sum;
+}
+
+void test7(){
+  int a;
+  scanf("%d", &a);
+
+  int half=countDigit(a);
+
+  printf("%d \n", half);
+
+  if(half%2==0){
+    half=half/2;
+  } else{ half=(half+1)/2;}
+
+  printf("%d \n", half);
+
+  int first=a / pow(10, half);
+  int last=a % (int)pow(10, half);
+
+  printf("%d \n", first);
+  printf("%d \n", last);
+
+  int reversedLast=reverse(last);
+
+  printf("%d \n", reversedLast);
+  
+  printf("%d \n", first + sum(reversedLast));
+
+}
+
 int main() {
-  test6();
+  test7();
   return 0;
 }
